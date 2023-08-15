@@ -1,0 +1,103 @@
+*{
+  font-family: "Helvetica Neue Medium Extended", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.range p {
+  font-size: 18px;
+}
+
+.gen-btn {
+  padding: 15px 30px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gen-btn:hover {
+  background-color: #d68910;
+}
+
+.build {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 350px;
+}
+.builds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.champion p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.role p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.item {
+  border: 2px solid gold;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item img {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.item-name {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.num-builds{
+  color: beige;
+  font-size: 2.5rem;
+}

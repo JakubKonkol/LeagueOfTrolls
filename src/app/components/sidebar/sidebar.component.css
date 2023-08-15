@@ -1,0 +1,33 @@
+.container{
+  width: 15vw;
+  height: 100vh;
+  background-color: #191919;
+  border-right: 1px solid beige;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  color: beige;
+  font-size: 3.5rem;
+}
+.title{
+  border-bottom: 1px solid gray;
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.link{
+  color: beige;
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 1rem;
+  font-weight: bolder;
+  border-bottom: 0.5px solid gray;
+}
+.link:hover{
+  cursor: pointer;
+}

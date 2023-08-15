@@ -1,0 +1,25 @@
+<div class="board">
+  <div class="controls">
+    <div class="range">
+      <p class="num-builds">  Number of Builds: {{numBuilds}} </p>
+      <input type="range" min="1" max="5" [(ngModel)]="numBuilds">
+    </div>
+    <button (click)="generateBuilds(numBuilds)" class="gen-btn"> GIVE ME TROLL BUILDS 😈 </button>
+  </div>
+
+  <div class="builds">
+    <div class="build" *ngFor="let build of currentBuilds">
+      <div class="champion">
+        <p> {{build.champion.name}} </p>
+      </div>
+      <div class="role">
+        <p>  {{build.role}} </p>
+      </div>
+      <div class="items">
+        <div class="item" *ngFor="let item of build.items">
+          <img src="{{item.icon}}" width="64px" height="64px">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
