@@ -62,14 +62,16 @@ export class BuildsComponent implements OnInit{
     let items = [];
     let boots = this.items.filter((item: Item) => item.type === "Boots");
     let mythics = this.items.filter((item: Item) => item.type === "Mythic");
-    let legendaries = this.items.filter((item: Item) => item.type === "Legendary");
+    let uniqueLegendaries = this.items.filter((item: Item) => item.type === "Legendary")
 
     items.push(boots[Math.floor(Math.random() * boots.length)]);
     items.push(mythics[Math.floor(Math.random() * mythics.length)]);
-    items.push(legendaries[Math.floor(Math.random() * legendaries.length)]);
-    items.push(legendaries[Math.floor(Math.random() * legendaries.length)]);
-    items.push(legendaries[Math.floor(Math.random() * legendaries.length)]);
-    items.push(legendaries[Math.floor(Math.random() * legendaries.length)]);
+    for(let i = 0; i < 4; i++){
+      let randomIndex = Math.floor(Math.random() * uniqueLegendaries.length);
+      items.push(uniqueLegendaries[randomIndex]);
+      uniqueLegendaries.splice(randomIndex, 1);
+
+    }
 
     return items;
   }

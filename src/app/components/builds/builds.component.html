@@ -10,10 +10,10 @@
   <div class="builds">
     <div class="build" *ngFor="let build of currentBuilds">
       <div class="champion">
-        <p> {{build.champion.name}} </p>
+        <p class="p-desc"> {{build.champion.name}} </p>
       </div>
       <div class="role">
-        <p>  {{build.role}} </p>
+        <p class="p-desc">  {{build.role}} </p>
       </div>
       <div class="items">
         <div class="item" *ngFor="let item of build.items">

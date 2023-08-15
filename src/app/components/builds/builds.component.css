@@ -50,7 +50,7 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #091428;
   width: 350px;
 }
 .builds {
@@ -100,4 +100,7 @@
 .num-builds{
   color: beige;
   font-size: 2.5rem;
+}
+.p-desc{
+  color: beige;
 }
