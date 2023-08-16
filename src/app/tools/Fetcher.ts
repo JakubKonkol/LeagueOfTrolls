@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {Item} from "../model/Item";
+import {GlobalConfiguration} from "../configuration/GlobalConfiguration";
 export class Fetcher{
   private mythicList: string[] = [
     'Youmuu\'s Ghostblade',
@@ -43,11 +44,9 @@ export class Fetcher{
    constructor() {
      this.fetchItems().then(r => console.log("Items fetched"))
   }
-  URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/items.json";
-  IMG_URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/"
   items: Item[] = [];
   async fetchItems(){
-    axios.get(this.URL).then((response) => {
+    axios.get(GlobalConfiguration.ITEMS_API_ENDPOINT).then((response) => {
       for(let item in response.data){
         if(response.data[item].categories.includes("Boots") && response.data[item].priceTotal >= 900){
           this.items.push(
@@ -73,7 +72,7 @@ export class Fetcher{
     console.log(this.items)
   }
   parseIcon(iconString: string){
-    iconString = iconString.replace('/lol-game-data/assets/ASSETS/Items/Icons2D/', this.IMG_URL);
+    iconString = iconString.replace('/lol-game-data/assets/ASSETS/Items/Icons2D/', GlobalConfiguration.ITEMS_IMG_ENDPOINT);
     iconString = iconString.replace(' ', '_');
     return iconString.toLowerCase();
   }

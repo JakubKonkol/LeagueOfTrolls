@@ -8,13 +8,15 @@ import { BuildsComponent } from './components/builds/builds.component';
 import {FormsModule} from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {ItemService} from "./service/ItemService";
+import { MobileNavViewComponent } from './components/mobile-nav-view/mobile-nav-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     BuildsComponent,
-    DashboardComponent
+    DashboardComponent,
+    MobileNavViewComponent
   ],
   imports: [
     BrowserModule,

@@ -7,3 +7,22 @@
 .right{
   flex-basis: 80%;
 }
+.mobile-nav{
+  display: none;
+}
+@media (max-width: 768px) {
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .mobile-nav{
+    display: block;
+  }
+  .left{
+    display: none;
+    flex-basis: 100%;
+  }
+  .right{
+    flex-basis: 100%;
+  }
+}

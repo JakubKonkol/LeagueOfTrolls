@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {GlobalConfiguration} from "../../configuration/GlobalConfiguration";
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
+  appVersion: string = GlobalConfiguration.APP_VERSION;
   constructor(private router: Router){
 
   }

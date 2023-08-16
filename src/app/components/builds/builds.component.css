@@ -108,3 +108,51 @@
   border: 1px solid black;
   box-shadow: 0 0 50px 15px #48abe0
 }
+@media (max-width: 768px) {
+  .board {
+    padding: 10px;
+  }
+
+  .build {
+    width: 100%;
+  }
+
+  .builds {
+    flex-direction: column;
+  }
+
+  .champion p {
+    font-size: 16px;
+  }
+
+  .role p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .item-name {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .num-builds {
+    font-size: 2rem;
+  }
+
+  .p-desc {
+    font-size: 14px;
+  }
+
+  .champion-img {
+    box-shadow: none;
+  }
+}

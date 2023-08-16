@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit, Renderer2} from '@angular/core';
-import {Fetcher} from "../../tools/Fetcher";
+import {Component, OnInit} from '@angular/core';
 import {Item} from "../../model/Item";
 import champions from "../../tools/champions.json"
 import {Champion} from "../../model/Champion";
