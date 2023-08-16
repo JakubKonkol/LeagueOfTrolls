@@ -3,6 +3,7 @@ import {Fetcher} from "../../tools/Fetcher";
 import {Item} from "../../model/Item";
 import champions from "../../tools/champions.json"
 import {Champion} from "../../model/Champion";
+import {ItemService} from "../../service/ItemService";
 
 @Component({
   selector: 'app-builds',
@@ -21,16 +22,20 @@ export class BuildsComponent implements OnInit{
   ]
   currentBuilds: any;
   numBuilds: number = 1;
-  constructor(private el: ElementRef, private renderer: Renderer2) {
+  constructor(private itemService: ItemService) {
   }
   ngOnInit(): void {
-    const fetcher = new Fetcher();
-    this.items = fetcher.items;
+    this.items = this.itemService.items
     for(let champ of champions){
       this.champions.push(
-        {name: champ.name}
+        {name: champ.name,
+        icon: this.parseIcon(champ.id)
+        }
       )
     }
+  }
+  parseIcon(id: number): string{
+    return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/${id}/${id}000.jpg`
   }
   generateBuilds(number: number){
     if (number <= 0) {

@@ -50,7 +50,7 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #091428;
+  background-color: #0A323C;
   width: 350px;
 }
 .builds {
@@ -103,4 +103,8 @@
 }
 .p-desc{
   color: beige;
+}
+.champion-img{
+  border: 1px solid black;
+  box-shadow: 0 0 50px 15px #48abe0
 }

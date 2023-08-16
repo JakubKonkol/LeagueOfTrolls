@@ -10,6 +10,7 @@
   <div class="builds">
     <div class="build" *ngFor="let build of currentBuilds">
       <div class="champion">
+        <img class="champion-img" src="{{build.champion.icon}}" width="100px" height="100px">
         <p class="p-desc"> {{build.champion.name}} </p>
       </div>
       <div class="role">

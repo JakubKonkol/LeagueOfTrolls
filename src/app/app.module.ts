@@ -7,6 +7,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BuildsComponent } from './components/builds/builds.component';
 import {FormsModule} from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {ItemService} from "./service/ItemService";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ItemService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
