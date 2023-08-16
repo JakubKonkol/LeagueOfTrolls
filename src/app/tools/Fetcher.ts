@@ -82,6 +82,8 @@ export class Fetcher{
       return "Mythic";
     }else if(this.bootsList.includes(name)){
       return "Boots";
+    }else if(name.includes("Ghostcrawlers")){
+      return "Unknown";
     }
     return "Legendary";
   }
