@@ -2,7 +2,9 @@
 Troll your ranked games like a pro!
 https://jakubkonkol.github.io/LeagueOfTrolls/
 ## Changelog
-
+### 1.0.3
+ - Fixed view for smaller screens
+ - code cleanup
 ### 1.0.2
   - Fixed issue where user could get item that is not in the game
 ### 1.0.1
